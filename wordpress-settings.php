@@ -130,7 +130,6 @@ class HuyPham_Wordpress_Settings {
 	 */
 	public function admin_tabs( $current = 'homepage' ) {
 		$tabs = apply_filters( 'huypham_setting_heading_tabs', [ 'general' => apply_filters( 'huypham_settings_heading_tab_general', __( 'General', 'huypham-text' ) ) ] );
-		echo '<div id="icon-options-general" class="icon32"></div>';
 		echo '<h2 class="nav-tab-wrapper">';
 		foreach ( $tabs as $tab => $name ) {
 			$class = ( $tab == $current ) ? ' nav-tab-active' : '';
@@ -173,6 +172,8 @@ class HuyPham_Wordpress_Settings {
 		}
 	}
 }
+
+include( 'sample-config.php' );
 
 
 
